@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "eFoods"
+version = "1.0.0"
+id = "artifacts/efoods"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21331
+
+[services.development]
+run = "pnpm --filter @workspace/efoods run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/efoods", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/efoods/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21331"
+BASE_PATH = "/"
