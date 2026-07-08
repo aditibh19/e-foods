@@ -6,9 +6,9 @@ A modern full-stack food ordering and delivery platform built using **React, Typ
 
 ## 🌐 Live Demo
 
-**Frontend:** https://your-vercel-app.vercel.app
+**Frontend:** https://e-foods-efoods.vercel.app/
 
-**Backend API:** https://your-render-app.onrender.com
+**Backend API:** https://e-foods.onrender.com
 
 ---
 
